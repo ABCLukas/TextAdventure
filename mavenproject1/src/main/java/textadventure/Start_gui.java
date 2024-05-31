@@ -17,6 +17,7 @@ public class Start_gui extends javax.swing.JFrame {
      */
     public Start_gui() {
         initComponents();
+        this.setResizable(false);
         ImageIcon cov = new ImageIcon("cover.jpg");
         backgound.setIcon(cov);
     }

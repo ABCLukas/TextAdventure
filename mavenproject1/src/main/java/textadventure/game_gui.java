@@ -15,6 +15,7 @@ public class game_gui extends javax.swing.JFrame {
      */
     public game_gui() {
         initComponents();
+        this.setResizable(false);
     }
 
     /**
