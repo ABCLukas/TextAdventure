@@ -59,7 +59,7 @@ public class beginning_gui extends javax.swing.JFrame {
                 startActionPerformed(evt);
             }
         });
-        getContentPane().add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 650, 150, -1));
+        getContentPane().add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 650, 150, -1));
         getContentPane().add(backgound, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 768));
 
         pack();
