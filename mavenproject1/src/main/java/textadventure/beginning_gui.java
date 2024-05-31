@@ -31,7 +31,7 @@ public class beginning_gui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("How all started...");
+        jLabel1.setText("How everything started");
 
         jLabel2.setText("jLabel2");
 
