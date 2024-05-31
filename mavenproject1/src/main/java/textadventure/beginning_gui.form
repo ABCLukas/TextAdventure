@@ -40,6 +40,13 @@
               </Group>
               <EmptySpace pref="483" max="32767" attributes="0"/>
           </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="backgound" min="-2" pref="506" max="-2" attributes="0"/>
+                  <EmptySpace pref="512" max="32767" attributes="0"/>
+              </Group>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -49,9 +56,16 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="362" max="32767" attributes="0"/>
+              <EmptySpace pref="618" max="32767" attributes="0"/>
               <Component id="start" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="286" max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="128" max="32767" attributes="0"/>
+                  <Component id="backgound" min="-2" pref="828" max="-2" attributes="0"/>
+                  <EmptySpace pref="68" max="32767" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -88,6 +102,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="startActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="backgound">
     </Component>
   </SubComponents>
 </Form>
