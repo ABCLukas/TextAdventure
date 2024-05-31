@@ -4,6 +4,8 @@
  */
 package textadventure;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author JKompatscher
@@ -15,6 +17,8 @@ public class Start_gui extends javax.swing.JFrame {
      */
     public Start_gui() {
         initComponents();
+        ImageIcon cov = new ImageIcon("cover.jpg");
+        backgound.setIcon(cov);
     }
 
     /**
@@ -26,53 +30,30 @@ public class Start_gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        start = new javax.swing.JButton();
+        backgound = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1024, 768));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        jButton1.setText("Start The Game");
+        jButton1.setPreferredSize(new java.awt.Dimension(120, 25));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 650, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Vivaldi", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(199, 190, 78));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Traces of Terror");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 600, -1));
 
-        start.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        start.setText("Start the game");
-        start.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                startActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(start))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(jLabel1)))
-                .addContainerGap(139, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(start)
-                .addContainerGap(228, Short.MAX_VALUE))
-        );
+        backgound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/textadventure/cover.jpg"))); // NOI18N
+        getContentPane().add(backgound, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 768));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
-        new game_gui().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_startActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,7 +91,8 @@ public class Start_gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel backgound;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton start;
     // End of variables declaration//GEN-END:variables
 }
