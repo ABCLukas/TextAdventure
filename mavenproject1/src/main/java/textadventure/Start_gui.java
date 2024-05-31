@@ -30,7 +30,7 @@ public class Start_gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        start = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         backgound = new javax.swing.JLabel();
 
@@ -38,10 +38,19 @@ public class Start_gui extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1024, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
-        jButton1.setText("Start The Game");
-        jButton1.setPreferredSize(new java.awt.Dimension(120, 25));
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 650, -1, -1));
+        start.setFont(new java.awt.Font("Vivaldi", 1, 18)); // NOI18N
+        start.setForeground(new java.awt.Color(199, 190, 78));
+        start.setText("Start The Game");
+        start.setBorder(null);
+        start.setBorderPainted(false);
+        start.setContentAreaFilled(false);
+        start.setPreferredSize(new java.awt.Dimension(120, 25));
+        start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startActionPerformed(evt);
+            }
+        });
+        getContentPane().add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 650, 150, -1));
 
         jLabel1.setFont(new java.awt.Font("Vivaldi", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(199, 190, 78));
@@ -52,6 +61,11 @@ public class Start_gui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
+      new beginning_gui().setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_startActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,7 +104,7 @@ public class Start_gui extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgound;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton start;
     // End of variables declaration//GEN-END:variables
 }
