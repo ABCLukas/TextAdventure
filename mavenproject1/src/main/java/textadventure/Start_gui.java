@@ -48,8 +48,6 @@ public class Start_gui extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Traces of Terror");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 600, -1));
-
-        backgound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/textadventure/cover.jpg"))); // NOI18N
         getContentPane().add(backgound, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 768));
 
         pack();
