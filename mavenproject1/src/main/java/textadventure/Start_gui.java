@@ -71,6 +71,7 @@ public class Start_gui extends javax.swing.JFrame {
 
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
         new game_gui().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_startActionPerformed
 
     /**
