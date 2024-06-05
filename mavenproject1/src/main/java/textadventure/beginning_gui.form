@@ -46,7 +46,6 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh&#xa;hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"/>
         <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>
       <Constraints>
