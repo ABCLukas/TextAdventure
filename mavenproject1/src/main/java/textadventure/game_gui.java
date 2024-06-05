@@ -28,33 +28,123 @@ public class game_gui extends javax.swing.JFrame {
     private void initComponents() {
 
         ueberschrift = new javax.swing.JLabel();
-        text = new javax.swing.JLabel();
+        map = new javax.swing.JPanel();
+        storage = new javax.swing.JPanel();
+        livingroom = new javax.swing.JPanel();
+        entrance = new javax.swing.JPanel();
+        kitchen = new javax.swing.JPanel();
+        stairway = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        ueberschrift.setText("jLabel1");
+        ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ueberschrift.setText("Traces of Terror");
 
-        text.setText("jLabel1");
+        map.setPreferredSize(new java.awt.Dimension(300, 300));
+        map.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        storage.setBackground(new java.awt.Color(51, 51, 51));
+        storage.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+        storage.setToolTipText("Storage room");
+
+        javax.swing.GroupLayout storageLayout = new javax.swing.GroupLayout(storage);
+        storage.setLayout(storageLayout);
+        storageLayout.setHorizontalGroup(
+            storageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+        storageLayout.setVerticalGroup(
+            storageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 56, Short.MAX_VALUE)
+        );
+
+        map.add(storage, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 40, 60));
+
+        livingroom.setBackground(new java.awt.Color(51, 51, 51));
+        livingroom.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+        livingroom.setToolTipText("Living room");
+
+        javax.swing.GroupLayout livingroomLayout = new javax.swing.GroupLayout(livingroom);
+        livingroom.setLayout(livingroomLayout);
+        livingroomLayout.setHorizontalGroup(
+            livingroomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 106, Short.MAX_VALUE)
+        );
+        livingroomLayout.setVerticalGroup(
+            livingroomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 96, Short.MAX_VALUE)
+        );
+
+        map.add(livingroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 110, 100));
+
+        entrance.setBackground(new java.awt.Color(51, 51, 51));
+        entrance.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+
+        javax.swing.GroupLayout entranceLayout = new javax.swing.GroupLayout(entrance);
+        entrance.setLayout(entranceLayout);
+        entranceLayout.setHorizontalGroup(
+            entranceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        entranceLayout.setVerticalGroup(
+            entranceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        map.add(entrance, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
+
+        kitchen.setBackground(new java.awt.Color(51, 51, 51));
+        kitchen.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+        kitchen.setToolTipText("Kitchen");
+
+        javax.swing.GroupLayout kitchenLayout = new javax.swing.GroupLayout(kitchen);
+        kitchen.setLayout(kitchenLayout);
+        kitchenLayout.setHorizontalGroup(
+            kitchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 106, Short.MAX_VALUE)
+        );
+        kitchenLayout.setVerticalGroup(
+            kitchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 36, Short.MAX_VALUE)
+        );
+
+        map.add(kitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 110, 40));
+
+        javax.swing.GroupLayout stairwayLayout = new javax.swing.GroupLayout(stairway);
+        stairway.setLayout(stairwayLayout);
+        stairwayLayout.setHorizontalGroup(
+            stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        stairwayLayout.setVerticalGroup(
+            stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        map.add(stairway, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 110, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(440, 440, 440)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(text)
-                    .addComponent(ueberschrift))
-                .addContainerGap(553, Short.MAX_VALUE))
+                .addGap(309, 309, 309)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ueberschrift, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(map, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)))
+                .addContainerGap(315, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ueberschrift)
-                .addGap(151, 151, 151)
-                .addComponent(text)
-                .addContainerGap(572, Short.MAX_VALUE))
+                .addComponent(ueberschrift, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(map, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(374, Short.MAX_VALUE))
         );
 
         pack();
@@ -96,7 +186,12 @@ public class game_gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel text;
+    private javax.swing.JPanel entrance;
+    private javax.swing.JPanel kitchen;
+    private javax.swing.JPanel livingroom;
+    private javax.swing.JPanel map;
+    private javax.swing.JPanel stairway;
+    private javax.swing.JPanel storage;
     private javax.swing.JLabel ueberschrift;
     // End of variables declaration//GEN-END:variables
 }
