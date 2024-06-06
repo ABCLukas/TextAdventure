@@ -17,6 +17,10 @@ public class Frage {
 		this.richtigeAntwort = richtigeAntwort;
                 
 	}
+
+    Frage(String word, String word0, int richtig) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 	
 	
 	public String getTitel() {
