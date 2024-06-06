@@ -1,4 +1,5 @@
-In a gloomy city named Los Angeles,/n a disturbing series of mysterious incidents unfolded, plunging the residents into fear. Among the inhabitants were Walther T., a former police officer who revealed himself as a ruthless murderer and human trafficker, as well as John Onoren, a 17-year-old Hispanic boy who became entangled in this nightmarish tale.
+<html>
+In a gloomy city named Los Angeles,<br> a disturbing series of mysterious incidents unfolded, plunging the residents into fear. Among the inhabitants were Walther T., a former  police officer who revealed himself as a ruthless murderer and human trafficker, as well as John Onoren, a 17-year-old Hispanic boy who became entangled in this nightmarish tale.
 
 The story begins with the sudden death of a guard in a villa on the outskirts of town. No one could explain what had happened, but rumours of eerie shadows and unsettling noises spread like wildfire. 
 
@@ -8,4 +9,4 @@ Simon, a young drug-addicted African American man desperately seeking a way out 
 
 Manuel, a shy nerd with a high-pitched, squeaky voice and a slow demeanour, also got caught in the vortex of horror. His innocence and naivety made him an easy target for the dark machinations lurking in Los Angeles 
 
-Emma, a self-proclaimed vegan and feminist always seeking justice, and Sophie, an independent and intelligent woman, soon found themselves in a race against time to uncover the truth and save the innocent souls from the clutches of evil. 
+Emma, a self-proclaimed vegan and  feminist always seeking justice, and Sophie, an independent and intelligent woman, soon found themselves in a race against time to uncover the truth and save the innocent souls from the clutches of evil. </html>

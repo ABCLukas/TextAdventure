@@ -46,8 +46,10 @@ public class beginning_gui extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1024, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(new java.awt.Font("Maiandra GD", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(199, 190, 78));
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, 360, 410));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, 480, 410));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("How everything began");

@@ -18,10 +18,12 @@ public class beginning_reader {
     try {
       File myObj = new File("beginning.txt");
       Scanner myReader = new Scanner(myObj);
-      while (myReader.hasNextLine ()) {
-         data = myReader.nextLine();
-        
+      while (myReader.hasNextLine()) {
+         data += myReader.nextLine();
+        data += "\n";
       }
+         System.out.println(data);
+        
       myReader.close();
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
