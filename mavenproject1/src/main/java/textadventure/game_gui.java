@@ -30,12 +30,12 @@ public class game_gui extends javax.swing.JFrame {
     private void initComponents() {
 
         map = new javax.swing.JPanel();
-        storage = new javax.swing.JPanel();
+        baricadedStair = new javax.swing.JPanel();
         livingroom = new javax.swing.JPanel();
         entrance = new javax.swing.JPanel();
         kitchen = new javax.swing.JPanel();
         stairway = new javax.swing.JPanel();
-        ueberschrift = new javax.swing.JLabel();
+        s = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -47,23 +47,23 @@ public class game_gui extends javax.swing.JFrame {
 
         map.setPreferredSize(new java.awt.Dimension(300, 300));
 
-        storage.setBackground(new java.awt.Color(204, 204, 204));
-        storage.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-        storage.setToolTipText("Storage room");
-        storage.addMouseListener(new java.awt.event.MouseAdapter() {
+        baricadedStair.setBackground(new java.awt.Color(204, 204, 204));
+        baricadedStair.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
+        baricadedStair.setToolTipText("Storage room");
+        baricadedStair.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                storageMouseClicked(evt);
+                baricadedStairMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout storageLayout = new javax.swing.GroupLayout(storage);
-        storage.setLayout(storageLayout);
-        storageLayout.setHorizontalGroup(
-            storageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout baricadedStairLayout = new javax.swing.GroupLayout(baricadedStair);
+        baricadedStair.setLayout(baricadedStairLayout);
+        baricadedStairLayout.setHorizontalGroup(
+            baricadedStairLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 36, Short.MAX_VALUE)
         );
-        storageLayout.setVerticalGroup(
-            storageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        baricadedStairLayout.setVerticalGroup(
+            baricadedStairLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 56, Short.MAX_VALUE)
         );
 
@@ -151,7 +151,7 @@ public class game_gui extends javax.swing.JFrame {
                         .addComponent(kitchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mapLayout.createSequentialGroup()
                         .addGap(60, 60, 60)
-                        .addComponent(storage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(baricadedStair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(livingroom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mapLayout.createSequentialGroup()
@@ -167,26 +167,26 @@ public class game_gui extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(kitchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(storage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(baricadedStair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(livingroom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addComponent(entrance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, 300));
+        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, 300));
 
-        ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ueberschrift.setText("Traces of Terror");
-        getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 230, 68));
+        s.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        s.setText("Traces of Terror");
+        getContentPane().add(s, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 230, 68));
 
         jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 660, 250, 80));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 250, 80));
 
         jButton2.setText("jButton1");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, 250, 80));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, 250, 80));
 
         jButton3.setText("jButton1");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 660, 250, 80));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 550, 250, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -198,8 +198,8 @@ private void lastRoomoff(String lr){
     entrance.setBackground(Color.WHITE);
     }else if(lr.equals("liv")){
     livingroom.setBackground(Color.WHITE);
-    }else if(lr.equals("stor")){
-    storage.setBackground(Color.WHITE);
+    }else if(lr.equals("Bstair")){
+    baricadedStair.setBackground(Color.WHITE);
     }else if(lr.equals("kitc")){
     kitchen.setBackground(Color.WHITE);
     }
@@ -207,7 +207,7 @@ private void lastRoomoff(String lr){
     private void livingroomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_livingroomMouseClicked
         livingroom.setBackground(Color.YELLOW);
         kitchen.setBackground(Color.WHITE);
-        storage.setBackground(Color.WHITE);
+        baricadedStair.setBackground(Color.WHITE);
         String room ="liv";
         beeninLiv = true;
         if(!room.equals(lastRoom)){
@@ -215,17 +215,6 @@ private void lastRoomoff(String lr){
         }        
         lastRoom = "liv";
     }//GEN-LAST:event_livingroomMouseClicked
-
-    private void storageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storageMouseClicked
-        if(beeninLiv){
-        storage.setBackground(Color.YELLOW);
-        String room ="stor";
-        if(!room.equals(lastRoom)){
-        lastRoomoff(lastRoom);  
-        } 
-        lastRoom = "stor";
-        }
-    }//GEN-LAST:event_storageMouseClicked
 
     private void entranceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entranceMouseClicked
         entrance.setBackground(Color.YELLOW);
@@ -246,6 +235,10 @@ private void lastRoomoff(String lr){
         lastRoom = "kitc";
         }
     }//GEN-LAST:event_kitchenMouseClicked
+
+    private void baricadedStairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_baricadedStairMouseClicked
+        System.out.println("YOU CAN NOT ENTER (I NATE HIGGERS)");
+    }//GEN-LAST:event_baricadedStairMouseClicked
 
     /**
      * @param args the command line arguments
@@ -283,6 +276,7 @@ private void lastRoomoff(String lr){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel baricadedStair;
     private javax.swing.JPanel entrance;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -290,8 +284,7 @@ private void lastRoomoff(String lr){
     private javax.swing.JPanel kitchen;
     private javax.swing.JPanel livingroom;
     private javax.swing.JPanel map;
+    private javax.swing.JLabel s;
     private javax.swing.JPanel stairway;
-    private javax.swing.JPanel storage;
-    private javax.swing.JLabel ueberschrift;
     // End of variables declaration//GEN-END:variables
 }
