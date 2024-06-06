@@ -4,6 +4,8 @@
  */
 package textadventure;
 
+import java.awt.Color;
+
 /**
  *
  * @author JKompatscher
@@ -27,29 +29,29 @@ public class game_gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ueberschrift = new javax.swing.JLabel();
         map = new javax.swing.JPanel();
         storage = new javax.swing.JPanel();
         livingroom = new javax.swing.JPanel();
         entrance = new javax.swing.JPanel();
-        playerPos = new javax.swing.JLabel();
         kitchen = new javax.swing.JPanel();
         stairway = new javax.swing.JPanel();
-        debug = new javax.swing.JButton();
+        ueberschrift = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1024, 768));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ueberschrift.setText("Traces of Terror");
-        getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 0, 0));
 
         map.setPreferredSize(new java.awt.Dimension(300, 300));
 
-        storage.setBackground(new java.awt.Color(51, 51, 51));
-        storage.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+        storage.setBackground(new java.awt.Color(204, 204, 204));
+        storage.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         storage.setToolTipText("Storage room");
+        storage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                storageMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout storageLayout = new javax.swing.GroupLayout(storage);
         storage.setLayout(storageLayout);
@@ -62,9 +64,14 @@ public class game_gui extends javax.swing.JFrame {
             .addGap(0, 56, Short.MAX_VALUE)
         );
 
-        livingroom.setBackground(new java.awt.Color(51, 51, 51));
-        livingroom.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+        livingroom.setBackground(new java.awt.Color(255, 255, 255));
+        livingroom.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         livingroom.setToolTipText("Living room");
+        livingroom.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                livingroomMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout livingroomLayout = new javax.swing.GroupLayout(livingroom);
         livingroom.setLayout(livingroomLayout);
@@ -77,33 +84,33 @@ public class game_gui extends javax.swing.JFrame {
             .addGap(0, 96, Short.MAX_VALUE)
         );
 
-        entrance.setBackground(new java.awt.Color(51, 51, 51));
-        entrance.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
-
-        playerPos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        playerPos.setForeground(new java.awt.Color(255, 255, 51));
-        playerPos.setText("@");
+        entrance.setBackground(new java.awt.Color(255, 255, 51));
+        entrance.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
+        entrance.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                entranceMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout entranceLayout = new javax.swing.GroupLayout(entrance);
         entrance.setLayout(entranceLayout);
         entranceLayout.setHorizontalGroup(
             entranceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(entranceLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(playerPos)
-                .addContainerGap(34, Short.MAX_VALUE))
+            .addGap(0, 76, Short.MAX_VALUE)
         );
         entranceLayout.setVerticalGroup(
             entranceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entranceLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(playerPos)
-                .addContainerGap())
+            .addGap(0, 43, Short.MAX_VALUE)
         );
 
-        kitchen.setBackground(new java.awt.Color(51, 51, 51));
-        kitchen.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(null), javax.swing.BorderFactory.createLineBorder(null)));
+        kitchen.setBackground(new java.awt.Color(204, 204, 204));
+        kitchen.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         kitchen.setToolTipText("Kitchen");
+        kitchen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                kitchenMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout kitchenLayout = new javax.swing.GroupLayout(kitchen);
         kitchen.setLayout(kitchenLayout);
@@ -162,24 +169,71 @@ public class game_gui extends javax.swing.JFrame {
                 .addComponent(entrance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, 300));
 
-        debug.setText("debug knopfele");
-        debug.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                debugActionPerformed(evt);
-            }
-        });
-        getContentPane().add(debug, new org.netbeans.lib.awtextra.AbsoluteConstraints(-32077, -32451, 75, -1));
+        ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ueberschrift.setText("Traces of Terror");
+        getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 230, 68));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+String lastRoom = "ent";
+Boolean beeninLiv = false;
+//exportieren
+private void lastRoomoff(String lr){
+    if(lr.equals("ent")){
+    entrance.setBackground(Color.WHITE);
+    }else if(lr.equals("liv")){
+    livingroom.setBackground(Color.WHITE);
+    }else if(lr.equals("stor")){
+    storage.setBackground(Color.WHITE);
+    }else if(lr.equals("kitc")){
+    kitchen.setBackground(Color.WHITE);
+    }
+}
+    private void livingroomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_livingroomMouseClicked
+        livingroom.setBackground(Color.YELLOW);
+        kitchen.setBackground(Color.WHITE);
+        storage.setBackground(Color.WHITE);
+        String room ="liv";
+        beeninLiv = true;
+        if(!room.equals(lastRoom)){
+        lastRoomoff(lastRoom);  
+        }        
+        lastRoom = "liv";
+    }//GEN-LAST:event_livingroomMouseClicked
 
-    private void debugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_debugActionPerformed
-        int y = playerPos.getY();
-        int x = playerPos.getX();
-        playerPos.setLocation(x,(y-20));
-    }//GEN-LAST:event_debugActionPerformed
+    private void storageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_storageMouseClicked
+        if(beeninLiv){
+        storage.setBackground(Color.YELLOW);
+        String room ="stor";
+        if(!room.equals(lastRoom)){
+        lastRoomoff(lastRoom);  
+        } 
+        lastRoom = "stor";
+        }
+    }//GEN-LAST:event_storageMouseClicked
+
+    private void entranceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entranceMouseClicked
+        entrance.setBackground(Color.YELLOW);
+        String room ="ent";
+        if(!room.equals(lastRoom)){
+        lastRoomoff(lastRoom);  
+        } 
+        lastRoom = "ent";
+    }//GEN-LAST:event_entranceMouseClicked
+
+    private void kitchenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kitchenMouseClicked
+        if(beeninLiv){
+        kitchen.setBackground(Color.YELLOW);
+        String room ="kitc";
+        if(!room.equals(lastRoom)){
+            lastRoomoff(lastRoom);  
+        } 
+        lastRoom = "kitc";
+        }
+    }//GEN-LAST:event_kitchenMouseClicked
 
     /**
      * @param args the command line arguments
@@ -217,12 +271,10 @@ public class game_gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton debug;
     private javax.swing.JPanel entrance;
     private javax.swing.JPanel kitchen;
     private javax.swing.JPanel livingroom;
     private javax.swing.JPanel map;
-    private javax.swing.JLabel playerPos;
     private javax.swing.JPanel stairway;
     private javax.swing.JPanel storage;
     private javax.swing.JLabel ueberschrift;
