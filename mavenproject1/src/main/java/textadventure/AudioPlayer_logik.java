@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author MathiasSchwienbacher
  */
-public class AudioPlayer_logik {
+public class AudioPlayer_logik extends Thread {
 
     private static int current = 0;
     private static Clip clip = null;
