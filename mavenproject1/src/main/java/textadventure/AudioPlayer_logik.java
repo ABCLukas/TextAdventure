@@ -32,7 +32,7 @@ public class AudioPlayer_logik extends Thread {
                 clip = AudioSystem.getClip();
                 clip.open(AudioSystem.getAudioInputStream(sound));
                 clip.start();
-                Thread.sleep(clip.getMicrosecondLength() / 1000);
+                //Thread.sleep(clip.getMicrosecondLength() / 1000);
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Fehler beim Abspielen der Adiodatei! " + "Audio: " + sounds.get(soundNr));
                 System.out.println("Fehler beim Abspielen der Audiodatei: " + e.getMessage());
