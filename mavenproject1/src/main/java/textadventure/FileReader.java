@@ -20,8 +20,8 @@ public static int counter=0;
                 counter++;
                 String line = scanner.nextLine();
                 String[] words =line.split("#");
-                int richtig = Integer.parseInt(words[5]);
-                Frage f = new Frage(words[0],words[1],words[2],words[3],words[4],richtig);
+                int richtig = Integer.parseInt(words[2]);
+                Frage f = new Frage(words[0],words[1],richtig);
                 liste.add(f);
             }
 
