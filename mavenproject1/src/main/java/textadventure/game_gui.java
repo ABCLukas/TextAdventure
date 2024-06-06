@@ -36,8 +36,6 @@ public class game_gui extends javax.swing.JFrame {
         kitchen = new javax.swing.JPanel();
         stairway = new javax.swing.JPanel();
         ueberschrift = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -47,6 +45,7 @@ public class game_gui extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         map.setPreferredSize(new java.awt.Dimension(300, 300));
+        map.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         baricadedStair.setBackground(new java.awt.Color(204, 204, 204));
         baricadedStair.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
@@ -68,6 +67,8 @@ public class game_gui extends javax.swing.JFrame {
             .addGap(0, 56, Short.MAX_VALUE)
         );
 
+        map.add(baricadedStair, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
         livingroom.setBackground(new java.awt.Color(255, 255, 255));
         livingroom.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         livingroom.setToolTipText("Living room");
@@ -88,6 +89,8 @@ public class game_gui extends javax.swing.JFrame {
             .addGap(0, 96, Short.MAX_VALUE)
         );
 
+        map.add(livingroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
+
         entrance.setBackground(new java.awt.Color(255, 255, 51));
         entrance.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         entrance.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -107,9 +110,12 @@ public class game_gui extends javax.swing.JFrame {
             .addGap(0, 43, Short.MAX_VALUE)
         );
 
+        map.add(entrance, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+
         kitchen.setBackground(new java.awt.Color(204, 204, 204));
         kitchen.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         kitchen.setToolTipText("Kitchen");
+        kitchen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         kitchen.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 kitchenMouseClicked(evt);
@@ -127,51 +133,23 @@ public class game_gui extends javax.swing.JFrame {
             .addGap(0, 36, Short.MAX_VALUE)
         );
 
+        map.add(kitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
+        stairway.setToolTipText("");
+        stairway.setPreferredSize(new java.awt.Dimension(70, 40));
+
         javax.swing.GroupLayout stairwayLayout = new javax.swing.GroupLayout(stairway);
         stairway.setLayout(stairwayLayout);
         stairwayLayout.setHorizontalGroup(
             stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 110, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
         stairwayLayout.setVerticalGroup(
             stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 42, Short.MAX_VALUE)
+            .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout mapLayout = new javax.swing.GroupLayout(map);
-        map.setLayout(mapLayout);
-        mapLayout.setHorizontalGroup(
-            mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mapLayout.createSequentialGroup()
-                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(mapLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(stairway, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(mapLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(kitchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(mapLayout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(baricadedStair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(livingroom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(mapLayout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(entrance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(90, 90, 90))
-        );
-        mapLayout.setVerticalGroup(
-            mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mapLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(stairway, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(kitchen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(mapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(baricadedStair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(livingroom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addComponent(entrance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        map.add(stairway, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
 
         getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, 300));
 
@@ -179,15 +157,7 @@ public class game_gui extends javax.swing.JFrame {
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
-
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 250, 80));
-
-        jButton2.setText("jButton1");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 550, 250, 80));
-
-        jButton3.setText("jButton1");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 550, 250, 80));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, 250, 80));
 
         jLabel1.setText("TIP: Hover above rooms to see more");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
@@ -232,6 +202,10 @@ private void lastRoomoff(String lr){
     private void kitchenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kitchenMouseClicked
         if(beeninLiv){
         kitchen.setBackground(Color.YELLOW);
+        stairway.setBackground(Color.gray);
+        stairway.setToolTipText("Stairway!");
+        stairway.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
+
         String room ="kitc";
         if(!room.equals(lastRoom)){
             lastRoomoff(lastRoom);  
@@ -282,8 +256,6 @@ private void lastRoomoff(String lr){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel baricadedStair;
     private javax.swing.JPanel entrance;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel kitchen;
