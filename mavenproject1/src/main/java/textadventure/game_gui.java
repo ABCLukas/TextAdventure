@@ -35,10 +35,11 @@ public class game_gui extends javax.swing.JFrame {
         entrance = new javax.swing.JPanel();
         kitchen = new javax.swing.JPanel();
         stairway = new javax.swing.JPanel();
-        s = new javax.swing.JLabel();
+        ueberschrift = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -49,7 +50,7 @@ public class game_gui extends javax.swing.JFrame {
 
         baricadedStair.setBackground(new java.awt.Color(204, 204, 204));
         baricadedStair.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-        baricadedStair.setToolTipText("Storage room");
+        baricadedStair.setToolTipText("Baricated Stairway");
         baricadedStair.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 baricadedStairMouseClicked(evt);
@@ -134,7 +135,7 @@ public class game_gui extends javax.swing.JFrame {
         );
         stairwayLayout.setVerticalGroup(
             stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addGap(0, 42, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout mapLayout = new javax.swing.GroupLayout(map);
@@ -174,10 +175,10 @@ public class game_gui extends javax.swing.JFrame {
 
         getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, 300));
 
-        s.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        s.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        s.setText("Traces of Terror");
-        getContentPane().add(s, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 230, 68));
+        ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ueberschrift.setText("Traces of Terror");
+        getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
 
         jButton1.setText("jButton1");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 550, 250, 80));
@@ -187,6 +188,9 @@ public class game_gui extends javax.swing.JFrame {
 
         jButton3.setText("jButton1");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 550, 250, 80));
+
+        jLabel1.setText("TIP: Hover above rooms to see more");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -281,10 +285,11 @@ private void lastRoomoff(String lr){
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel kitchen;
     private javax.swing.JPanel livingroom;
     private javax.swing.JPanel map;
-    private javax.swing.JLabel s;
     private javax.swing.JPanel stairway;
+    private javax.swing.JLabel ueberschrift;
     // End of variables declaration//GEN-END:variables
 }
