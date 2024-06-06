@@ -19,8 +19,11 @@ public class Frage {
 	}
 	
 	
-	public String getFrage() {
+	public String getTitel() {
 		return titel;
+	}
+        public String getText() {
+		return text;
 	}
 	public String getAntwort1() {
 		return antwort1;
