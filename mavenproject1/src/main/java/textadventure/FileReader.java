@@ -10,26 +10,20 @@ public class FileReader {
 public static int counter=0;
     
 
-    public ArrayList<Frage> readQuestionsFromFile(String fileName) {
-
-        ArrayList<Frage> liste = new ArrayList<Frage>();
+    public String readFile(String fileName) {
         try {
             Scanner scanner = new Scanner(new File(fileName),"UTF-8");
 
             while(scanner.hasNext()) {
                 counter++;
                 String line = scanner.nextLine();
-                String[] words =line.split("#");
-                int richtig = Integer.parseInt(words[2]);
-                Frage f = new Frage(words[0],words[1],richtig);
-                liste.add(f);
             }
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        return liste;
+        return "Geat net";
     }
 
 
