@@ -12,9 +12,6 @@ import javax.swing.ImageIcon;
  */
 public class Start_gui extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Start_gui
-     */
     public Start_gui() {
         initComponents();
         this.setResizable(false);

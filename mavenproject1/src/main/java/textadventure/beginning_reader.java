@@ -22,7 +22,7 @@ public class beginning_reader {
          data += myReader.nextLine();
         data += "\n";
       }
-         System.out.println(data);
+        
         
       myReader.close();
     } catch (FileNotFoundException e) {
