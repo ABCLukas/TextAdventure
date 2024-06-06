@@ -32,9 +32,9 @@ public class Start_gui extends javax.swing.JFrame {
     private void initComponents() {
 
         start = new javax.swing.JButton();
+        howtoplay = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         backgound = new javax.swing.JLabel();
-        start1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1024, 768));
@@ -55,26 +55,26 @@ public class Start_gui extends javax.swing.JFrame {
         });
         getContentPane().add(start, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 330, 50));
 
+        howtoplay.setFont(new java.awt.Font("Vivaldi", 1, 18)); // NOI18N
+        howtoplay.setForeground(new java.awt.Color(199, 190, 78));
+        howtoplay.setText("How to Play");
+        howtoplay.setBorder(null);
+        howtoplay.setBorderPainted(false);
+        howtoplay.setContentAreaFilled(false);
+        howtoplay.setPreferredSize(new java.awt.Dimension(120, 25));
+        howtoplay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                howtoplayActionPerformed(evt);
+            }
+        });
+        getContentPane().add(howtoplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, 150, -1));
+
         jLabel1.setFont(new java.awt.Font("Vivaldi", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(199, 190, 78));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Traces of Terror");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 600, -1));
         getContentPane().add(backgound, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 768));
-
-        start1.setFont(new java.awt.Font("Vivaldi", 1, 18)); // NOI18N
-        start1.setForeground(new java.awt.Color(199, 190, 78));
-        start1.setText("How to Play");
-        start1.setBorder(null);
-        start1.setBorderPainted(false);
-        start1.setContentAreaFilled(false);
-        start1.setPreferredSize(new java.awt.Dimension(120, 25));
-        start1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                start1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(start1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 610, 150, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -84,9 +84,9 @@ public class Start_gui extends javax.swing.JFrame {
       this.dispose();
     }//GEN-LAST:event_startActionPerformed
 
-    private void start1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_start1ActionPerformed
+    private void howtoplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_howtoplayActionPerformed
        new howtoplay().setVisible(true);
-    }//GEN-LAST:event_start1ActionPerformed
+    }//GEN-LAST:event_howtoplayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,8 +125,8 @@ public class Start_gui extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgound;
+    private javax.swing.JButton howtoplay;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton start;
-    private javax.swing.JButton start1;
     // End of variables declaration//GEN-END:variables
 }

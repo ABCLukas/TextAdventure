@@ -203,7 +203,7 @@ private void lastRoomoff(String lr){
     }else if(lr.equals("liv")){
     livingroom.setBackground(Color.WHITE);
     }else if(lr.equals("Bstair")){
-    baricadedStair.setBackground(Color.WHITE);
+    baricadedStair.setBackground(Color.DARK_GRAY);
     }else if(lr.equals("kitc")){
     kitchen.setBackground(Color.WHITE);
     }
@@ -211,7 +211,7 @@ private void lastRoomoff(String lr){
     private void livingroomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_livingroomMouseClicked
         livingroom.setBackground(Color.YELLOW);
         kitchen.setBackground(Color.WHITE);
-        baricadedStair.setBackground(Color.WHITE);
+        baricadedStair.setBackground(Color.GRAY);
         String room ="liv";
         beeninLiv = true;
         if(!room.equals(lastRoom)){
