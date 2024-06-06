@@ -4,8 +4,9 @@
  */
 package textadventure;
 
+import java.awt.GridLayout;
 import javax.swing.ImageIcon;
-import static textadventure.beginning_reader.readFileToString;
+
 
 /**
  *
@@ -17,7 +18,10 @@ public class beginning_gui extends javax.swing.JFrame {
      * Creates new form beginning_gui
      */
     public beginning_gui() {
+        
+        
         initComponents();
+        jLabel3.setText(beginning_reader.reader());
         this.setResizable(false);
         ImageIcon walther = new ImageIcon("waltherwhite.png");
         backgound.setIcon(walther);
@@ -42,8 +46,8 @@ public class beginning_gui extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1024, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 960, 670));
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, 360, 410));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("How everything began");
@@ -70,7 +74,7 @@ public class beginning_gui extends javax.swing.JFrame {
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
 
 
-        jLabel3.setText(beginning_reader.readFileToString("beginning.txt"));
+        
         new game_gui().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_startActionPerformed

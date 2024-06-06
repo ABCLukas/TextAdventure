@@ -8,30 +8,27 @@ package textadventure;
  *
  * @author JKompatscher
  */
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.File;  // Import the File class
+import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.Scanner; // Import the Scanner class to read text files
 
-public class beginning_reader{
-
-public static String readFileToString(String filePath) {
-StringBuilder content = new StringBuilder();
-
-try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-String line;
-while ((line = reader.readLine()) != null) {
-content.append(line).append("\n");
-}
-} catch (IOException e) {
-e.printStackTrace();
-}
-
-
-return content.toString();
-
-}
-
-
+public class beginning_reader {
+  public static String reader() {
+      String data = "";
+    try {
+      File myObj = new File("beginning.txt");
+      Scanner myReader = new Scanner(myObj);
+      while (myReader.hasNextLine ()) {
+         data = myReader.nextLine();
+        
+      }
+      myReader.close();
+    } catch (FileNotFoundException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+    return data;
+  }
 }
     
 
