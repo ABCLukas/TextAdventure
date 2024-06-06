@@ -36,6 +36,8 @@ public class game_gui extends javax.swing.JFrame {
         kitchen = new javax.swing.JPanel();
         stairway = new javax.swing.JPanel();
         ueberschrift = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -176,6 +178,12 @@ public class game_gui extends javax.swing.JFrame {
         ueberschrift.setText("Traces of Terror");
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 230, 68));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setViewportView(jTextPane1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 340, 220));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 String lastRoom = "ent";
@@ -272,6 +280,8 @@ private void lastRoomoff(String lr){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel entrance;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JPanel kitchen;
     private javax.swing.JPanel livingroom;
     private javax.swing.JPanel map;
