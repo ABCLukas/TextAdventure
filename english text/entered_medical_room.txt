@@ -1,2 +1,0 @@
-You enter the room. You see a lot of medical supplies, and there is Manuel lying on a table in the middle of the room. Next to him is a man with a scalpel in his hand, and in the corner of the room stands a big, dark creature. After a few seconds, you realize it's Walther T. Chardonnay. He smiles at you. You are scared as hell, but you see a syringe. Do you want to grab it and try to hit him to save Manuel? (rescue_manuel) 
-You run as fast as you can out of the medical room. (running_out_medical_room) 
