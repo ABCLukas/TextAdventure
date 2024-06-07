@@ -16,7 +16,7 @@ public static int counter=0;
             dateiname = "englishtext/crowbar.txt";
             break;
         case 2:
-            dateiname = "englishtext/destroyed_window_work_room.txt";//schaug mol ob richtig gschrieben isch(isch net fixt wer ondores)
+            dateiname = "englishtext/destroyed_window_work_room.txt";//schaug mol ob richtig gschrieben isch(isch net fixt wer ondores) isch richtig super Gemacht!!!
             break;
         case 3:
             dateiname = "englishtext/dropped_weapon.txt";
