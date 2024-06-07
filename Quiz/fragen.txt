@@ -1,0 +1,8 @@
+Wie heißt die Hauptstadt von Italien?#Rom#Mailand#Meran#Brixen#1
+Wie heißt die Hauptstadt von Deutschland?#Muenchen#Berlin#Hamburg#Stuttgart#2
+Wie lautet die chemische Formel von Wasser?#HO2#2H2O#HO#H2O#4
+Welches dieser Tiere ist der König der Tiere?#Leopard#Jaguar#Löwe#Tiger#3
+Wie lautet das Ergebniss von 8*14?#111#132#112#98#3
+Welches ist das größte lebende Landtier?#Elefant#Blauwal#Pferd#Giraffe#4
+Welches ist die größt mögliche 3 Stellige Zahl wenn jede Ziffer nur 1 mal verwendet werden darf?#999#987#989#1004#2
+Wie viel ist 5*5?#20#25#10#5#2
