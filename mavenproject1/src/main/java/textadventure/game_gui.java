@@ -159,7 +159,7 @@ public class game_gui extends javax.swing.JFrame {
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, 250, 80));
 
-        jLabel1.setText("TIP: Hover above rooms to see more");
+        jLabel1.setText("TIP: Hover above rooms to See more");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
 
         pack();
