@@ -36,8 +36,9 @@ public class game_gui extends javax.swing.JFrame {
         kitchen = new javax.swing.JPanel();
         stairway = new javax.swing.JPanel();
         ueberschrift = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        TIP = new javax.swing.JLabel();
+        coice2 = new javax.swing.JButton();
+        coice1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -157,10 +158,15 @@ public class game_gui extends javax.swing.JFrame {
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, 250, 80));
 
-        jLabel1.setText("TIP: Hover above rooms to See more");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
+        TIP.setText("TIP: Hover above rooms to See more");
+        getContentPane().add(TIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
+
+        coice2.setText(" ");
+        getContentPane().add(coice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 90, -1));
+
+        coice1.setText(" ");
+        getContentPane().add(coice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 140, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -254,10 +260,11 @@ private void lastRoomoff(String lr){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel TIP;
     private javax.swing.JPanel baricadedStair;
+    private javax.swing.JButton coice1;
+    private javax.swing.JButton coice2;
     private javax.swing.JPanel entrance;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel kitchen;
     private javax.swing.JPanel livingroom;
     private javax.swing.JPanel map;
