@@ -269,13 +269,28 @@ private void lastRoomoff(String lr){
             case 2:
                 text.setText(reader(12));
                 b++;
+                jButton1.setText("Enter medical room");
+                jButton2.setText("Throw hammer");
                 break;
             case 3:
-                
+                text.setText(reader(15));
+                jButton1.setText("go up stairs");
+                jButton2.setText("go up stairs");
+                b++;
+                break;
+            case 4:
+                text.setText(reader(13));
+                jButton1.setText("Left door");
+                jButton2.setText("Right door");
+                b++;
+                break;
+            case 5:
+                text.setText(reader(10));
                 break;
             default:
                 break;
         }
+        System.out.println(b);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

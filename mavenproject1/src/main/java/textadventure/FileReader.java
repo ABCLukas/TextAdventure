@@ -49,7 +49,7 @@ public static int counter=0;
             dateiname = "englishtext/stairs_down.txt";
             break;
             case 13:
-            dateiname = "englishtext/staris_up.txt";
+            dateiname = "englishtext/stairs_up.txt";
             break;
             case 14:
             dateiname = "englishtext/stay_living_room.txt";
