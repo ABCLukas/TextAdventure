@@ -16,7 +16,7 @@ public static int counter=0;
             dateiname = "englishtext/crowbar.txt";
             break;
         case 2:
-            dateiname = "englishtext/destroyed_window_work_room.txt";//schaug mol ob richtig gschrieben isch(isch net fixt wer ondores) isch richtig super Gemacht!!!
+            dateiname = "englishtext/destroyed_window_work_room.txt";
             break;
         case 3:
             dateiname = "englishtext/dropped_weapon.txt";
@@ -65,7 +65,7 @@ public static int counter=0;
     }
     try {
       File myObj = new File(dateiname);
-      Scanner myReader = new Scanner(myObj);
+      Scanner myReader = new Scanner(myObj,"utf-8");
       while (myReader.hasNextLine()) {
          data += myReader.nextLine();
         data += "\n";

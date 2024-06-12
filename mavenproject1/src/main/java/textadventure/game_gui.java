@@ -5,6 +5,9 @@
 package textadventure;
 
 import java.awt.Color;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static textadventure.FileReader.reader;
 
 /**
  *
@@ -18,6 +21,7 @@ public class game_gui extends javax.swing.JFrame {
     public game_gui() {
         initComponents();
         this.setResizable(false);
+        text.setText(reader(5));
     }
 
     /**
@@ -37,8 +41,9 @@ public class game_gui extends javax.swing.JFrame {
         stairway = new javax.swing.JPanel();
         ueberschrift = new javax.swing.JLabel();
         TIP = new javax.swing.JLabel();
-        coice2 = new javax.swing.JButton();
-        coice1 = new javax.swing.JButton();
+        text = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -92,7 +97,7 @@ public class game_gui extends javax.swing.JFrame {
 
         map.add(livingroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
 
-        entrance.setBackground(new java.awt.Color(255, 255, 51));
+        entrance.setBackground(new java.awt.Color(255, 255, 255));
         entrance.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         entrance.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -113,7 +118,7 @@ public class game_gui extends javax.swing.JFrame {
 
         map.add(entrance, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
 
-        kitchen.setBackground(new java.awt.Color(204, 204, 204));
+        kitchen.setBackground(new java.awt.Color(255, 255, 0));
         kitchen.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
         kitchen.setToolTipText("Kitchen");
         kitchen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -136,6 +141,8 @@ public class game_gui extends javax.swing.JFrame {
 
         map.add(kitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
 
+        stairway.setBackground(new java.awt.Color(255, 255, 255));
+        stairway.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         stairway.setToolTipText("");
         stairway.setPreferredSize(new java.awt.Dimension(70, 40));
 
@@ -143,16 +150,16 @@ public class game_gui extends javax.swing.JFrame {
         stairway.setLayout(stairwayLayout);
         stairwayLayout.setHorizontalGroup(
             stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+            .addGap(0, 68, Short.MAX_VALUE)
         );
         stairwayLayout.setVerticalGroup(
             stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addGap(0, 38, Short.MAX_VALUE)
         );
 
         map.add(stairway, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
 
-        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, 300));
+        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, 300));
 
         ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -161,12 +168,23 @@ public class game_gui extends javax.swing.JFrame {
 
         TIP.setText("TIP: Hover above rooms to See more");
         getContentPane().add(TIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
+        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 650, 350));
 
-        coice2.setText(" ");
-        getContentPane().add(coice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 90, -1));
+        jButton1.setText("Crowbar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 300, 220));
 
-        coice1.setText(" ");
-        getContentPane().add(coice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 140, -1));
+        jButton2.setText("Open Window");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, 290, 210));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -221,8 +239,44 @@ private void lastRoomoff(String lr){
     }//GEN-LAST:event_kitchenMouseClicked
 
     private void baricadedStairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_baricadedStairMouseClicked
-        System.out.println("YOU CAN NOT ENTER (I NATE HIGGERS)");
+
     }//GEN-LAST:event_baricadedStairMouseClicked
+
+    int b = 1;
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        switch (b) {
+            case 1:
+                text.setText(reader(1));
+                b++;
+                break;
+            case 2:
+                text.setText(reader(13));
+                b++;
+            default:
+            break;
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        switch (b) {
+            case 1:
+                text.setText(reader(8));
+                b++;
+                jButton1.setText("Stairs up");
+                jButton2.setText("Stairs Down");
+                break;
+            case 2:
+                text.setText(reader(12));
+                b++;
+                break;
+            case 3:
+                
+                break;
+            default:
+                break;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,13 +316,14 @@ private void lastRoomoff(String lr){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel TIP;
     private javax.swing.JPanel baricadedStair;
-    private javax.swing.JButton coice1;
-    private javax.swing.JButton coice2;
     private javax.swing.JPanel entrance;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel kitchen;
     private javax.swing.JPanel livingroom;
     private javax.swing.JPanel map;
     private javax.swing.JPanel stairway;
+    private javax.swing.JLabel text;
     private javax.swing.JLabel ueberschrift;
     // End of variables declaration//GEN-END:variables
 }
