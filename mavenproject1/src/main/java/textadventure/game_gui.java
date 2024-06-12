@@ -22,8 +22,9 @@ public class game_gui extends javax.swing.JFrame {
     public game_gui() {
         initComponents();
         this.setResizable(false);
+        ImageIcon cov = new ImageIcon("first_scene.png");
+        backpic_label.setIcon(cov);
         text.setText(reader(5));
-
     }
 
     /**
@@ -35,17 +36,21 @@ public class game_gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        text = new javax.swing.JLabel();
         status = new javax.swing.JLabel();
         ueberschrift = new javax.swing.JLabel();
-        text = new javax.swing.JLabel();
         left_button = new javax.swing.JButton();
         right_button = new javax.swing.JButton();
         restart_button = new javax.swing.JButton();
+        backpic_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        text.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 650, 350));
 
         status.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         status.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -55,7 +60,6 @@ public class game_gui extends javax.swing.JFrame {
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
-        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 650, 350));
 
         left_button.setText("Crowbar");
         left_button.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +67,7 @@ public class game_gui extends javax.swing.JFrame {
                 left_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(left_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 230, 180));
+        getContentPane().add(left_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, 140, 110));
 
         right_button.setText("Open Window");
         right_button.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +75,7 @@ public class game_gui extends javax.swing.JFrame {
                 right_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(right_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 510, 230, 170));
+        getContentPane().add(right_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, 140, 100));
 
         restart_button.setText("Restart");
         restart_button.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +83,8 @@ public class game_gui extends javax.swing.JFrame {
                 restart_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(restart_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 560, 120, 70));
+        getContentPane().add(restart_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 640, 120, 70));
+        getContentPane().add(backpic_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -89,9 +94,7 @@ public class game_gui extends javax.swing.JFrame {
 //exportieren
 
     //int b = 1;
-    boolean c = false;
     int d = 5;
-
     int b = 1;
 
     private void left_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_buttonActionPerformed
@@ -101,63 +104,64 @@ public class game_gui extends javax.swing.JFrame {
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 8) { //stairs up
             d = 13;
             text.setText(reader(13));
             left_button.setText("Turn Left");
             right_button.setText("Turn Right");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 7) {
             d = 5;
             text.setText(reader(7));
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 12) {
             d = 4;
             text.setText(reader(4));
             left_button.setText("Rescue Manuel");
             right_button.setText("Run out of medical room");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 11) {//FEHLER --- NEIN! 
             d = 14;
             text.setText(reader(14));
             left_button.setText("Drop weapon");
             right_button.setText("Drop Weapon");
+            status.setText("YOU LOST!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 13) {
             d = 7;
             text.setText(reader(7));
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 14) {
             d = 3;
             text.setText(reader(3));
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
+        } else if (d == 16) {
+            d = 2;
+            text.setText(reader(2));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU WON!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         }
         System.out.println(d);
-
-        /* switch (b) {
-            case 1:
-                text.setText(reader(1));
-                status.setText("You Died");
-                status.setForeground(Color.RED);
-                break;
-            case 2:
-                text.setText(reader(13));
-                jButton1.setText("Left door");
-                jButton2.setText("Right door");
-                b++;
-            case 3:
-                text.setText(reader(7));
-                status.setText("You Died");
-                status.setForeground(Color.RED);
-                break;
-            default:
-            break;
-        }
-        System.out.println(b);
-         */
     }//GEN-LAST:event_left_buttonActionPerformed
 
     private void right_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_buttonActionPerformed
@@ -166,83 +170,77 @@ public class game_gui extends javax.swing.JFrame {
             text.setText(reader(8));
             left_button.setText("stairs up");
             right_button.setText("stairs down");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 8) { //stairs down
             d = 12;
             text.setText(reader(12));
             left_button.setText("Enter medical room");
             right_button.setText("Throw Hammer");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 12) {
             d = 15;
             text.setText(reader(15));
-            left_button.setText("Stairs UP");
-            right_button.setText("Stairs UP");
+            left_button.setText("Stairs Up");
+            right_button.setText("Stairs Up");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 15) {
             d = 13;
             text.setText(reader(13));
             left_button.setText("Turn Left");
             right_button.setText("Turn Right");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 13) {
             d = 10;
             text.setText(reader(10));
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU WON!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 11) {
             d = 16;
             text.setText(reader(16));
             left_button.setText("Jump out the broken window");
             right_button.setText("Jump out the broken window");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 16) {
             d = 2;
             text.setText(reader(2));
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU WON!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         } else if (d == 14) {
             d = 3;
             text.setText(reader(3));
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
+        } else if (d == 4) {
+            d = 11;
+            text.setText(reader(11));
+            left_button.setText("Stay in the Living Room");
+            right_button.setText("Go to Work Room");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
+        } else if (d == 7) {
+            d = 5;
+            text.setText(reader(7));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU LOST!");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         }
 
-        /* switch (b) {
-            case 1:
-                text.setText(reader(8));
-                b++;
-                jButton1.setText("Stairs up");
-                jButton2.setText("Stairs Down");
-                break;
-            case 2:
-                text.setText(reader(12));
-                b++;
-                jButton1.setText("Enter medical room");
-                jButton2.setText("Throw hammer");
-                break;
-            case 3:
-                text.setText(reader(15));
-                jButton1.setText("go up stairs");
-                jButton2.setText("go up stairs");
-                b++;
-                break;
-            case 4:
-                text.setText(reader(13));
-                jButton1.setText("Left door");
-                jButton2.setText("Right door");
-                b++;
-                break;
-            case 5:
-                jButton1.setText("");
-                jButton2.setText("");
-                text.setText(reader(10));
-                status.setText("You Won");
-
-                break;
-            default:
-                break;
-        }
-        System.out.println(b);
-         */
     }//GEN-LAST:event_right_buttonActionPerformed
 
     private void restart_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restart_buttonActionPerformed
@@ -285,6 +283,7 @@ public class game_gui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel backpic_label;
     private javax.swing.JButton left_button;
     private javax.swing.JButton restart_button;
     private javax.swing.JButton right_button;
