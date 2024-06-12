@@ -247,15 +247,20 @@ private void lastRoomoff(String lr){
         switch (b) {
             case 1:
                 text.setText(reader(1));
-                b++;
+                System.out.println("YOU LOST");
                 break;
             case 2:
                 text.setText(reader(13));
+                jButton1.setText("Left door");
+                jButton2.setText("Right door");
                 b++;
+            case 3:
+                text.setText(reader(7));
+                break;
             default:
             break;
         }
-        
+        System.out.println(b);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
