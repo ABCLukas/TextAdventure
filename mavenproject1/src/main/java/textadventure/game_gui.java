@@ -82,7 +82,7 @@ public class game_gui extends javax.swing.JFrame {
             text.setText(reader(1));
             jButton1.setText("");
             jButton2.setText("");
-        }else if(d==13){
+        }else if(d==8){
             d = 7; 
             text.setText(reader(13));
             jButton1.setText("Turn Left");
@@ -93,10 +93,15 @@ public class game_gui extends javax.swing.JFrame {
             jButton1.setText("");
             jButton2.setText("");
         }else if(d==12){
-            d=13;
-            text.setText(reader(13));
-            jButton1.setText("Left ");
-            jButton2.setText("Right");
+            d=4;
+            text.setText(reader(4));
+            jButton1.setText("Rescue Manuel");
+            jButton2.setText("Run out of medical room");
+        }else if(d==4){
+            d= 9;
+            text.setText(reader(9));
+            jButton1.setText("");
+            jButton2.setText("");
         }
         
         /* switch (b) {
@@ -146,6 +151,21 @@ public class game_gui extends javax.swing.JFrame {
         }else if(d == 13){
             d = 10;
             text.setText(reader(10));
+            jButton1.setText("");
+            jButton2.setText("");
+        }else if(d==4){
+            d=11;
+            text.setText(reader(11));
+            jButton1.setText("Stay in the Living Room");
+            jButton2.setText("Go to Work Room");
+        }else if(d==11){
+            d=16;
+            text.setText(reader(16));
+            jButton1.setText("Jump out the broken window");
+            jButton2.setText("Jump out the broken window");
+        }else if(d==16){
+            d=2;
+            text.setText(reader(2));
             jButton1.setText("");
             jButton2.setText("");
         }
