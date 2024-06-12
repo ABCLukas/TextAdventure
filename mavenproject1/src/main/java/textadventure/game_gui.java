@@ -76,10 +76,6 @@ public class game_gui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-String lastRoom = "ent";
-Boolean beeninLiv = false;
-//exportieren
-
     int b = 1;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         switch (b) {
