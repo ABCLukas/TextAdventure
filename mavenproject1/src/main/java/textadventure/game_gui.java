@@ -97,13 +97,13 @@ public class game_gui extends javax.swing.JFrame {
             text.setText(reader(4));
             jButton1.setText("Rescue Manuel");
             jButton2.setText("Run out of medical room");
-        }else if(d==4){
+        }else if(d==11){//FEHLER 
             d= 9;
             text.setText(reader(9));
             jButton1.setText("");
             jButton2.setText("");
         }
-        
+        System.out.println(d);
         /* switch (b) {
             case 1:
                 text.setText(reader(1));
@@ -207,6 +207,7 @@ public class game_gui extends javax.swing.JFrame {
         }
         System.out.println(b);
         */
+        System.out.println(d);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
