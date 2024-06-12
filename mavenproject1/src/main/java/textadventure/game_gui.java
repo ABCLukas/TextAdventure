@@ -7,6 +7,7 @@ package textadventure;
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import static textadventure.FileReader.reader;
 
 /**
@@ -22,6 +23,7 @@ public class game_gui extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         text.setText(reader(5));
+        
     }
 
     /**
@@ -39,6 +41,7 @@ public class game_gui extends javax.swing.JFrame {
         text = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        label_hintergrund = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -73,10 +76,11 @@ public class game_gui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, 290, 210));
+        getContentPane().add(label_hintergrund, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-<<<<<<< HEAD
+
 String lastRoom = "ent";
 Boolean beeninLiv = false;
 //exportieren
@@ -84,14 +88,17 @@ Boolean beeninLiv = false;
     //int b = 1;
       boolean c = false;
       int d = 5;
-=======
+
     int b = 1;
->>>>>>> 9124bfca7c68f82a26779b32de902704290a5a8e
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(d==5){
-            int d = 1;
+            d = 1;
             text.setText(reader(1));
             jButton1.setText("");
+            jButton2.setText("");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(1));
+            label_hintergrund.setIcon(cov);
         }
         
         /* switch (b) {
@@ -119,7 +126,7 @@ Boolean beeninLiv = false;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(d==5){
-            int d = 8;
+            d = 8;
             text.setText(reader(8));
             jButton1.setText("stairs up");
             jButton2.setText("stairs down");
@@ -203,6 +210,7 @@ Boolean beeninLiv = false;
     private javax.swing.JLabel TIP;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel label_hintergrund;
     private javax.swing.JLabel status;
     private javax.swing.JLabel text;
     private javax.swing.JLabel ueberschrift;
