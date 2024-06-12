@@ -76,6 +76,7 @@ public class game_gui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+<<<<<<< HEAD
 String lastRoom = "ent";
 Boolean beeninLiv = false;
 //exportieren
@@ -83,6 +84,9 @@ Boolean beeninLiv = false;
     //int b = 1;
       boolean c = false;
       int d = 5;
+=======
+    int b = 1;
+>>>>>>> 9124bfca7c68f82a26779b32de902704290a5a8e
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(d==5){
             int d = 1;
