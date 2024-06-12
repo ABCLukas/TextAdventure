@@ -35,7 +35,6 @@ public class game_gui extends javax.swing.JFrame {
 
         status = new javax.swing.JLabel();
         ueberschrift = new javax.swing.JLabel();
-        TIP = new javax.swing.JLabel();
         text = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -53,9 +52,6 @@ public class game_gui extends javax.swing.JFrame {
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
-
-        TIP.setText("TIP: Hover above rooms to See more");
-        getContentPane().add(TIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
         getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 650, 350));
 
         jButton1.setText("Crowbar");
@@ -76,22 +72,31 @@ public class game_gui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-<<<<<<< HEAD
-String lastRoom = "ent";
-Boolean beeninLiv = false;
-//exportieren
 
     //int b = 1;
       boolean c = false;
       int d = 5;
-=======
-    int b = 1;
->>>>>>> 9124bfca7c68f82a26779b32de902704290a5a8e
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(d==5){
-            int d = 1;
+            d = 1;
             text.setText(reader(1));
             jButton1.setText("");
+            jButton2.setText("");
+        }else if(d==13){
+            d = 7; 
+            text.setText(reader(13));
+            jButton1.setText("Turn Left");
+            jButton2.setText("Turn Right");
+        }else if(d == 7){
+            d=5;
+            text.setText(reader(7));
+            jButton1.setText("");
+            jButton2.setText("");
+        }else if(d==12){
+            d=13;
+            text.setText(reader(13));
+            jButton1.setText("Left ");
+            jButton2.setText("Right");
         }
         
         /* switch (b) {
@@ -119,10 +124,30 @@ Boolean beeninLiv = false;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(d==5){
-            int d = 8;
+            d = 8;
             text.setText(reader(8));
             jButton1.setText("stairs up");
             jButton2.setText("stairs down");
+        }else if(d == 8){
+            d = 12;
+            text.setText(reader(12));
+            jButton1.setText("Enter medical room");
+            jButton2.setText("Throw Hammer");
+        }else if(d==12){
+            d = 15;
+            text.setText(reader(15));
+            jButton1.setText("Stairs UP");
+            jButton2.setText("Stairs UP");
+        }else if(d == 15){
+            d = 13; 
+            text.setText(reader(13));
+            jButton1.setText("Turn Left");
+            jButton2.setText("Turn Right");
+        }else if(d == 13){
+            d = 10;
+            text.setText(reader(10));
+            jButton1.setText("");
+            jButton2.setText("");
         }
         
         /* switch (b) {
@@ -200,7 +225,6 @@ Boolean beeninLiv = false;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel TIP;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel status;
