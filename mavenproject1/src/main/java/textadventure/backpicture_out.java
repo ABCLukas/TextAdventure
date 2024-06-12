@@ -17,7 +17,7 @@ public class backpicture_out {
                 dateiname = "room_behind_se_kitschen.png";
                 break;
             case 2:
-                dateiname = "englishtext/destroyed_window_work_room.txt";
+                dateiname = "smashed_window.png";
                 break;
             case 3:
                 dateiname = "dropped_weapon.png";
@@ -35,7 +35,7 @@ public class backpicture_out {
                 dateiname = "bloody_bathroom.png";
                 break;
             case 8:
-                dateiname = "englishtext/opened_window.txt";
+                dateiname = "opened_window.png";
                 break;
             case 9:
                 dateiname = "medical_room.png";

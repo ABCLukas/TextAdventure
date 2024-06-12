@@ -23,7 +23,7 @@ public class game_gui extends javax.swing.JFrame {
         initComponents();
         this.setResizable(false);
         text.setText(reader(5));
-        
+
     }
 
     /**
@@ -37,11 +37,10 @@ public class game_gui extends javax.swing.JFrame {
 
         status = new javax.swing.JLabel();
         ueberschrift = new javax.swing.JLabel();
-        TIP = new javax.swing.JLabel();
         text = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        label_hintergrund = new javax.swing.JLabel();
+        left_button = new javax.swing.JButton();
+        right_button = new javax.swing.JButton();
+        restart_button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
@@ -56,51 +55,88 @@ public class game_gui extends javax.swing.JFrame {
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
         getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
+        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 650, 350));
 
-        TIP.setText("TIP: Hover above rooms to See more");
-        getContentPane().add(TIP, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
-        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 650, 350));
-
-        jButton1.setText("Crowbar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        left_button.setText("Crowbar");
+        left_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                left_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 300, 220));
+        getContentPane().add(left_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, 230, 180));
 
-        jButton2.setText("Open Window");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        right_button.setText("Open Window");
+        right_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                right_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 170, 290, 210));
-        getContentPane().add(label_hintergrund, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 770));
+        getContentPane().add(right_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 510, 230, 170));
+
+        restart_button.setText("Restart");
+        restart_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restart_buttonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(restart_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 560, 120, 70));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-String lastRoom = "ent";
-Boolean beeninLiv = false;
+    String lastRoom = "ent";
+    Boolean beeninLiv = false;
 //exportieren
 
     //int b = 1;
-      boolean c = false;
-      int d = 5;
+    boolean c = false;
+    int d = 5;
 
     int b = 1;
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(d==5){
+    private void left_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_buttonActionPerformed
+        if (d == 5) { //used crowbar
             d = 1;
             text.setText(reader(1));
-            jButton1.setText("");
-            jButton2.setText("");
-            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(1));
-            label_hintergrund.setIcon(cov);
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU LOST!");
+        } else if (d == 8) { //stairs up
+            d = 13;
+            text.setText(reader(13));
+            left_button.setText("Turn Left");
+            right_button.setText("Turn Right");
+        } else if (d == 7) {
+            d = 5;
+            text.setText(reader(7));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU LOST!");
+        } else if (d == 12) {
+            d = 4;
+            text.setText(reader(4));
+            left_button.setText("Rescue Manuel");
+            right_button.setText("Run out of medical room");
+        } else if (d == 11) {//FEHLER --- NEIN! 
+            d = 14;
+            text.setText(reader(14));
+            left_button.setText("Drop weapon");
+            right_button.setText("Drop Weapon");
+        } else if (d == 13) {
+            d = 7;
+            text.setText(reader(7));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU LOST!!");
+        } else if (d == 14) {
+            d = 3;
+            text.setText(reader(3));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU LOST!!");
         }
-        
+        System.out.println(d);
+
         /* switch (b) {
             case 1:
                 text.setText(reader(1));
@@ -121,17 +157,55 @@ Boolean beeninLiv = false;
             break;
         }
         System.out.println(b);
-        */
-    }//GEN-LAST:event_jButton1ActionPerformed
+         */
+    }//GEN-LAST:event_left_buttonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if(d==5){
+    private void right_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_buttonActionPerformed
+        if (d == 5) { //opened window
             d = 8;
             text.setText(reader(8));
-            jButton1.setText("stairs up");
-            jButton2.setText("stairs down");
+            left_button.setText("stairs up");
+            right_button.setText("stairs down");
+        } else if (d == 8) { //stairs down
+            d = 12;
+            text.setText(reader(12));
+            left_button.setText("Enter medical room");
+            right_button.setText("Throw Hammer");
+        } else if (d == 12) {
+            d = 15;
+            text.setText(reader(15));
+            left_button.setText("Stairs UP");
+            right_button.setText("Stairs UP");
+        } else if (d == 15) {
+            d = 13;
+            text.setText(reader(13));
+            left_button.setText("Turn Left");
+            right_button.setText("Turn Right");
+        } else if (d == 13) {
+            d = 10;
+            text.setText(reader(10));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU WON!");
+        } else if (d == 11) {
+            d = 16;
+            text.setText(reader(16));
+            left_button.setText("Jump out the broken window");
+            right_button.setText("Jump out the broken window");
+        } else if (d == 16) {
+            d = 2;
+            text.setText(reader(2));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU WON!");
+        } else if (d == 14) {
+            d = 3;
+            text.setText(reader(3));
+            left_button.setText("");
+            right_button.setText("");
+            status.setText("YOU LOST!!");
         }
-        
+
         /* switch (b) {
             case 1:
                 text.setText(reader(8));
@@ -168,8 +242,12 @@ Boolean beeninLiv = false;
                 break;
         }
         System.out.println(b);
-        */
-    }//GEN-LAST:event_jButton2ActionPerformed
+         */
+    }//GEN-LAST:event_right_buttonActionPerformed
+
+    private void restart_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restart_buttonActionPerformed
+        new Start_gui().setVisible(true);
+    }//GEN-LAST:event_restart_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,10 +285,9 @@ Boolean beeninLiv = false;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel TIP;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel label_hintergrund;
+    private javax.swing.JButton left_button;
+    private javax.swing.JButton restart_button;
+    private javax.swing.JButton right_button;
     private javax.swing.JLabel status;
     private javax.swing.JLabel text;
     private javax.swing.JLabel ueberschrift;
