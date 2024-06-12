@@ -33,12 +33,7 @@ public class game_gui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        map = new javax.swing.JPanel();
-        baricadedStair = new javax.swing.JPanel();
-        livingroom = new javax.swing.JPanel();
-        entrance = new javax.swing.JPanel();
-        kitchen = new javax.swing.JPanel();
-        stairway = new javax.swing.JPanel();
+        status = new javax.swing.JLabel();
         ueberschrift = new javax.swing.JLabel();
         TIP = new javax.swing.JLabel();
         text = new javax.swing.JLabel();
@@ -50,116 +45,9 @@ public class game_gui extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        map.setPreferredSize(new java.awt.Dimension(300, 300));
-        map.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        baricadedStair.setBackground(new java.awt.Color(204, 204, 204));
-        baricadedStair.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-        baricadedStair.setToolTipText("Baricated Stairway");
-        baricadedStair.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                baricadedStairMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout baricadedStairLayout = new javax.swing.GroupLayout(baricadedStair);
-        baricadedStair.setLayout(baricadedStairLayout);
-        baricadedStairLayout.setHorizontalGroup(
-            baricadedStairLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
-        );
-        baricadedStairLayout.setVerticalGroup(
-            baricadedStairLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 56, Short.MAX_VALUE)
-        );
-
-        map.add(baricadedStair, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
-
-        livingroom.setBackground(new java.awt.Color(255, 255, 255));
-        livingroom.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-        livingroom.setToolTipText("Living room");
-        livingroom.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                livingroomMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout livingroomLayout = new javax.swing.GroupLayout(livingroom);
-        livingroom.setLayout(livingroomLayout);
-        livingroomLayout.setHorizontalGroup(
-            livingroomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 106, Short.MAX_VALUE)
-        );
-        livingroomLayout.setVerticalGroup(
-            livingroomLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 96, Short.MAX_VALUE)
-        );
-
-        map.add(livingroom, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, -1));
-
-        entrance.setBackground(new java.awt.Color(255, 255, 255));
-        entrance.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-        entrance.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                entranceMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout entranceLayout = new javax.swing.GroupLayout(entrance);
-        entrance.setLayout(entranceLayout);
-        entranceLayout.setHorizontalGroup(
-            entranceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 76, Short.MAX_VALUE)
-        );
-        entranceLayout.setVerticalGroup(
-            entranceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 43, Short.MAX_VALUE)
-        );
-
-        map.add(entrance, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
-
-        kitchen.setBackground(new java.awt.Color(255, 255, 0));
-        kitchen.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-        kitchen.setToolTipText("Kitchen");
-        kitchen.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        kitchen.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                kitchenMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout kitchenLayout = new javax.swing.GroupLayout(kitchen);
-        kitchen.setLayout(kitchenLayout);
-        kitchenLayout.setHorizontalGroup(
-            kitchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 106, Short.MAX_VALUE)
-        );
-        kitchenLayout.setVerticalGroup(
-            kitchenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
-        );
-
-        map.add(kitchen, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
-
-        stairway.setBackground(new java.awt.Color(255, 255, 255));
-        stairway.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        stairway.setToolTipText("");
-        stairway.setPreferredSize(new java.awt.Dimension(70, 40));
-
-        javax.swing.GroupLayout stairwayLayout = new javax.swing.GroupLayout(stairway);
-        stairway.setLayout(stairwayLayout);
-        stairwayLayout.setHorizontalGroup(
-            stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 68, Short.MAX_VALUE)
-        );
-        stairwayLayout.setVerticalGroup(
-            stairwayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 38, Short.MAX_VALUE)
-        );
-
-        map.add(stairway, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
-
-        getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, 300));
+        status.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        status.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 280, 40));
 
         ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -191,63 +79,14 @@ public class game_gui extends javax.swing.JFrame {
 String lastRoom = "ent";
 Boolean beeninLiv = false;
 //exportieren
-private void lastRoomoff(String lr){
-    if(lr.equals("ent")){
-    entrance.setBackground(Color.WHITE);
-    }else if(lr.equals("liv")){
-    livingroom.setBackground(Color.WHITE);
-    }else if(lr.equals("Bstair")){
-    baricadedStair.setBackground(Color.DARK_GRAY);
-    }else if(lr.equals("kitc")){
-    kitchen.setBackground(Color.WHITE);
-    }
-}
-    private void livingroomMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_livingroomMouseClicked
-        livingroom.setBackground(Color.YELLOW);
-        kitchen.setBackground(Color.WHITE);
-        baricadedStair.setBackground(Color.GRAY);
-        String room ="liv";
-        beeninLiv = true;
-        if(!room.equals(lastRoom)){
-        lastRoomoff(lastRoom);  
-        }        
-        lastRoom = "liv";
-    }//GEN-LAST:event_livingroomMouseClicked
-
-    private void entranceMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entranceMouseClicked
-        entrance.setBackground(Color.YELLOW);
-        String room ="ent";
-        if(!room.equals(lastRoom)){
-        lastRoomoff(lastRoom);  
-        } 
-        lastRoom = "ent";
-    }//GEN-LAST:event_entranceMouseClicked
-
-    private void kitchenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_kitchenMouseClicked
-        if(beeninLiv){
-        kitchen.setBackground(Color.YELLOW);
-        stairway.setBackground(Color.gray);
-        stairway.setToolTipText("Stairway!");
-        stairway.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
-
-        String room ="kitc";
-        if(!room.equals(lastRoom)){
-            lastRoomoff(lastRoom);  
-        } 
-        lastRoom = "kitc";
-        }
-    }//GEN-LAST:event_kitchenMouseClicked
-
-    private void baricadedStairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_baricadedStairMouseClicked
-
-    }//GEN-LAST:event_baricadedStairMouseClicked
 
     int b = 1;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         switch (b) {
             case 1:
                 text.setText(reader(1));
-                System.out.println("YOU LOST");
+                status.setText("You Died");
+                status.setForeground(Color.RED);
                 break;
             case 2:
                 text.setText(reader(13));
@@ -256,6 +95,8 @@ private void lastRoomoff(String lr){
                 b++;
             case 3:
                 text.setText(reader(7));
+                status.setText("You Died");
+                status.setForeground(Color.RED);
                 break;
             default:
             break;
@@ -290,7 +131,11 @@ private void lastRoomoff(String lr){
                 b++;
                 break;
             case 5:
+                jButton1.setText("");
+                jButton2.setText("");
                 text.setText(reader(10));
+                status.setText("You Won");
+
                 break;
             default:
                 break;
@@ -335,14 +180,9 @@ private void lastRoomoff(String lr){
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel TIP;
-    private javax.swing.JPanel baricadedStair;
-    private javax.swing.JPanel entrance;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JPanel kitchen;
-    private javax.swing.JPanel livingroom;
-    private javax.swing.JPanel map;
-    private javax.swing.JPanel stairway;
+    private javax.swing.JLabel status;
     private javax.swing.JLabel text;
     private javax.swing.JLabel ueberschrift;
     // End of variables declaration//GEN-END:variables
