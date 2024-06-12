@@ -24,6 +24,7 @@ public class game_gui extends javax.swing.JFrame {
         this.setResizable(false);
         ImageIcon cov = new ImageIcon("first_scene.png");
         backpic_label.setIcon(cov);
+        text.setBackground(Color.WHITE);
         text.setText(reader(5));
     }
 
@@ -47,19 +48,15 @@ public class game_gui extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         text.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 650, 350));
 
         status.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         status.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 280, 40));
 
         ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
-        getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
 
         left_button.setText("Crowbar");
         left_button.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +64,6 @@ public class game_gui extends javax.swing.JFrame {
                 left_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(left_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, 140, 110));
 
         right_button.setText("Open Window");
         right_button.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +71,6 @@ public class game_gui extends javax.swing.JFrame {
                 right_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(right_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, 140, 100));
 
         restart_button.setText("Restart");
         restart_button.addActionListener(new java.awt.event.ActionListener() {
@@ -83,8 +78,49 @@ public class game_gui extends javax.swing.JFrame {
                 restart_buttonActionPerformed(evt);
             }
         });
-        getContentPane().add(restart_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 640, 120, 70));
-        getContentPane().add(backpic_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(370, 370, 370)
+                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(left_button, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(220, 220, 220)
+                .addComponent(restart_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(200, 200, 200)
+                .addComponent(right_button, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(400, 400, 400)
+                .addComponent(ueberschrift, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(backpic_label, javax.swing.GroupLayout.PREFERRED_SIZE, 1030, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(370, 370, 370)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(left_button, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(restart_button, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(right_button, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(ueberschrift, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(130, 130, 130)
+                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(backpic_label, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,6 +136,7 @@ public class game_gui extends javax.swing.JFrame {
     private void left_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_buttonActionPerformed
         if (d == 5) { //used crowbar
             d = 1;
+            text.setBackground(Color.WHITE);
             text.setText(reader(1));
             left_button.setText("");
             right_button.setText("");
@@ -108,6 +145,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 8) { //stairs up
             d = 13;
+            text.setBackground(Color.WHITE);
             text.setText(reader(13));
             left_button.setText("Turn Left");
             right_button.setText("Turn Right");
@@ -115,6 +153,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 7) {
             d = 5;
+            text.setBackground(Color.WHITE);
             text.setText(reader(7));
             left_button.setText("");
             right_button.setText("");
@@ -123,6 +162,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 12) {
             d = 4;
+            text.setBackground(Color.WHITE);
             text.setText(reader(4));
             left_button.setText("Rescue Manuel");
             right_button.setText("Run out of medical room");
@@ -130,6 +170,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 11) {//FEHLER --- NEIN! 
             d = 14;
+            text.setBackground(Color.WHITE);
             text.setText(reader(14));
             left_button.setText("Drop weapon");
             right_button.setText("Drop Weapon");
@@ -138,6 +179,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 13) {
             d = 7;
+            text.setBackground(Color.WHITE);
             text.setText(reader(7));
             left_button.setText("");
             right_button.setText("");
@@ -146,6 +188,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 14) {
             d = 3;
+            text.setBackground(Color.WHITE);
             text.setText(reader(3));
             left_button.setText("");
             right_button.setText("");
@@ -154,6 +197,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 16) {
             d = 2;
+            text.setBackground(Color.WHITE);
             text.setText(reader(2));
             left_button.setText("");
             right_button.setText("");
@@ -167,6 +211,7 @@ public class game_gui extends javax.swing.JFrame {
     private void right_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_buttonActionPerformed
         if (d == 5) { //opened window
             d = 8;
+            text.setBackground(Color.WHITE);
             text.setText(reader(8));
             left_button.setText("stairs up");
             right_button.setText("stairs down");
@@ -174,6 +219,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 8) { //stairs down
             d = 12;
+            text.setBackground(Color.WHITE);
             text.setText(reader(12));
             left_button.setText("Enter medical room");
             right_button.setText("Throw Hammer");
@@ -181,6 +227,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 12) {
             d = 15;
+            text.setBackground(Color.WHITE);
             text.setText(reader(15));
             left_button.setText("Stairs Up");
             right_button.setText("Stairs Up");
@@ -188,6 +235,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 15) {
             d = 13;
+            text.setBackground(Color.WHITE);
             text.setText(reader(13));
             left_button.setText("Turn Left");
             right_button.setText("Turn Right");
@@ -195,6 +243,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 13) {
             d = 10;
+            text.setBackground(Color.WHITE);
             text.setText(reader(10));
             left_button.setText("");
             right_button.setText("");
@@ -203,6 +252,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 11) {
             d = 16;
+            text.setBackground(Color.WHITE);
             text.setText(reader(16));
             left_button.setText("Jump out the broken window");
             right_button.setText("Jump out the broken window");
@@ -210,6 +260,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 16) {
             d = 2;
+            text.setBackground(Color.WHITE);
             text.setText(reader(2));
             left_button.setText("");
             right_button.setText("");
@@ -218,6 +269,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 14) {
             d = 3;
+            text.setBackground(Color.WHITE);
             text.setText(reader(3));
             left_button.setText("");
             right_button.setText("");
@@ -226,6 +278,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 4) {
             d = 11;
+            text.setBackground(Color.WHITE);
             text.setText(reader(11));
             left_button.setText("Stay in the Living Room");
             right_button.setText("Go to Work Room");
@@ -233,6 +286,7 @@ public class game_gui extends javax.swing.JFrame {
             backpic_label.setIcon(cov);
         } else if (d == 7) {
             d = 5;
+            text.setBackground(Color.WHITE);
             text.setText(reader(7));
             left_button.setText("");
             right_button.setText("");
