@@ -80,9 +80,17 @@ String lastRoom = "ent";
 Boolean beeninLiv = false;
 //exportieren
 
-    int b = 1;
+    //int b = 1;
+      boolean c = false;
+      int d = 5;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        switch (b) {
+        if(d==5){
+            int d = 1;
+            text.setText(reader(1));
+            jButton1.setText("");
+        }
+        
+        /* switch (b) {
             case 1:
                 text.setText(reader(1));
                 status.setText("You Died");
@@ -102,10 +110,18 @@ Boolean beeninLiv = false;
             break;
         }
         System.out.println(b);
+        */
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        switch (b) {
+        if(d==5){
+            int d = 8;
+            text.setText(reader(8));
+            jButton1.setText("stairs up");
+            jButton2.setText("stairs down");
+        }
+        
+        /* switch (b) {
             case 1:
                 text.setText(reader(8));
                 b++;
@@ -141,6 +157,7 @@ Boolean beeninLiv = false;
                 break;
         }
         System.out.println(b);
+        */
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
