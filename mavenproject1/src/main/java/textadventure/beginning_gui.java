@@ -25,6 +25,8 @@ public class beginning_gui extends javax.swing.JFrame {
         this.setResizable(false);
         ImageIcon walther = new ImageIcon("waltherwhite.png");
         backgound.setIcon(walther);
+        AudioPlayer_logik.start(0);
+        
     }
 
     /**

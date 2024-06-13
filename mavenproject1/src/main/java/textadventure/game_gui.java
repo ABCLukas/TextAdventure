@@ -26,6 +26,7 @@ public class game_gui extends javax.swing.JFrame {
         backpic_label.setIcon(cov);
         text.setBackground(Color.WHITE);
         text.setText(reader(5));
+        //AudioPlayer_logik.start(0);
     }
 
     /**
@@ -43,20 +44,26 @@ public class game_gui extends javax.swing.JFrame {
         left_button = new javax.swing.JButton();
         right_button = new javax.swing.JButton();
         restart_button = new javax.swing.JButton();
+        sound_button = new javax.swing.JButton();
         backpic_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         text.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 650, 350));
 
         status.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         status.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 280, 40));
 
+        ueberschrift.setBackground(new java.awt.Color(255, 255, 255));
         ueberschrift.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         ueberschrift.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ueberschrift.setText("Traces of Terror");
+        getContentPane().add(ueberschrift, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 48, 230, 40));
 
         left_button.setText("Crowbar");
         left_button.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +71,7 @@ public class game_gui extends javax.swing.JFrame {
                 left_buttonActionPerformed(evt);
             }
         });
+        getContentPane().add(left_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, 140, 110));
 
         right_button.setText("Open Window");
         right_button.addActionListener(new java.awt.event.ActionListener() {
@@ -71,6 +79,7 @@ public class game_gui extends javax.swing.JFrame {
                 right_buttonActionPerformed(evt);
             }
         });
+        getContentPane().add(right_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, 140, 100));
 
         restart_button.setText("Restart");
         restart_button.addActionListener(new java.awt.event.ActionListener() {
@@ -78,49 +87,16 @@ public class game_gui extends javax.swing.JFrame {
                 restart_buttonActionPerformed(evt);
             }
         });
+        getContentPane().add(restart_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 640, 120, 70));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(370, 370, 370)
-                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(left_button, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(220, 220, 220)
-                .addComponent(restart_button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(200, 200, 200)
-                .addComponent(right_button, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(400, 400, 400)
-                .addComponent(ueberschrift, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(backpic_label, javax.swing.GroupLayout.PREFERRED_SIZE, 1030, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(370, 370, 370)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(left_button, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(restart_button, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(right_button, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(ueberschrift, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(text, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(backpic_label, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        sound_button.setText("sound on");
+        sound_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sound_buttonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sound_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        getContentPane().add(backpic_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,6 +108,7 @@ public class game_gui extends javax.swing.JFrame {
     //int b = 1;
     int d = 5;
     int b = 1;
+    boolean sound = true;
 
     private void left_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_left_buttonActionPerformed
         if (d == 5) { //used crowbar
@@ -301,6 +278,18 @@ public class game_gui extends javax.swing.JFrame {
         new Start_gui().setVisible(true);
     }//GEN-LAST:event_restart_buttonActionPerformed
 
+    private void sound_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sound_buttonActionPerformed
+        if (sound) {
+            sound_button.setText("sound off");
+            AudioPlayer_logik.reset();
+            sound = false;
+        } else {
+            sound_button.setText("sound on");
+            AudioPlayer_logik.start(0);
+            sound = true;
+        }
+    }//GEN-LAST:event_sound_buttonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -341,6 +330,7 @@ public class game_gui extends javax.swing.JFrame {
     private javax.swing.JButton left_button;
     private javax.swing.JButton restart_button;
     private javax.swing.JButton right_button;
+    private javax.swing.JButton sound_button;
     private javax.swing.JLabel status;
     private javax.swing.JLabel text;
     private javax.swing.JLabel ueberschrift;

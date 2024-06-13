@@ -21,10 +21,7 @@ public class AudioPlayer_logik extends Thread {
 
     public static void start(int soundNr) {
         ArrayList<String> sounds = new ArrayList<>();
-        sounds.add("sound1.wav");
-        sounds.add("sound2.wav");
-        sounds.add("sound3.wav");
-        sounds.add("sound4.wav");
+        sounds.add("sound0.wav");
 
         if (soundNr >= 0 && soundNr < sounds.size()) {
             try {
