@@ -124,7 +124,7 @@ public class game_gui extends javax.swing.JFrame {
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!");
-            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            ImageIcon cov = new ImageIcon("first_scene.png");
             backpic_label.setIcon(cov);
         } else if (d == 8) { //stairs up
             d = 13;
