@@ -45,6 +45,7 @@ public class game_gui extends javax.swing.JFrame {
         right_button = new javax.swing.JButton();
         restart_button = new javax.swing.JButton();
         sound_button = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         backpic_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -53,6 +54,7 @@ public class game_gui extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         text.setBackground(new java.awt.Color(255, 255, 255));
+        text.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         getContentPane().add(text, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 650, 350));
 
         status.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -73,7 +75,7 @@ public class game_gui extends javax.swing.JFrame {
         });
         getContentPane().add(left_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, 140, 110));
 
-        right_button.setText("Open Window");
+        right_button.setText("Use Spatula");
         right_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 right_buttonActionPerformed(evt);
@@ -96,6 +98,10 @@ public class game_gui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(sound_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 670, 430));
         getContentPane().add(backpic_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 770));
 
         pack();
@@ -327,6 +333,7 @@ public class game_gui extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backpic_label;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton left_button;
     private javax.swing.JButton restart_button;
     private javax.swing.JButton right_button;
