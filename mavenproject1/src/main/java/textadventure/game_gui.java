@@ -124,8 +124,10 @@ public class game_gui extends javax.swing.JFrame {
             left_button.setText("");
             right_button.setText("");
             status.setText("YOU LOST!");
-            ImageIcon cov = new ImageIcon("first_scene.png");
+            ImageIcon cov = new ImageIcon("first_scene.png"); 
             backpic_label.setIcon(cov);
+            jPanel1.setSize(100, 200);
+            text.setSize(100, 50);
         } else if (d == 8) { //stairs up
             d = 13;
             text.setBackground(Color.WHITE);
@@ -157,7 +159,7 @@ public class game_gui extends javax.swing.JFrame {
             text.setText(reader(14));
             left_button.setText("Drop weapon");
             right_button.setText("Drop Weapon");
-            status.setText("YOU LOST!");
+            status.setText("");
             ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
             backpic_label.setIcon(cov);
         } else if (d == 13) {
@@ -187,8 +189,16 @@ public class game_gui extends javax.swing.JFrame {
             status.setText("YOU WON!");
             ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
             backpic_label.setIcon(cov);
+        } else if (d == 4) {
+            d = 9;
+            text.setBackground(Color.WHITE);
+            text.setText(reader(9));
+            left_button.setText("");
+            right_button.setText("");
+            ImageIcon cov = new ImageIcon(backpicture_out.backpicture(d));
+            backpic_label.setIcon(cov);
         }
-        System.out.println(d);
+        
     }//GEN-LAST:event_left_buttonActionPerformed
 
     private void right_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_right_buttonActionPerformed
